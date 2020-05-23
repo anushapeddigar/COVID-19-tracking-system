@@ -1,0 +1,212 @@
+h1.nav1{
+  color: white;
+  font-family: "SansSerif";
+  font-size:3rem;
+  display: grid;
+  background-color: midnightblue;
+  text-align: center;
+  width: 1440px;
+  height: 350px;
+  align-content: center;
+
+}
+
+.CAUSES{
+  display: grid;
+  border: 1px solid powderblue;
+  width: 420px;
+  height: 171px;
+  font-size: .9cm;
+  font-family: "Microsoft Sans Serif";
+  align-content: center;
+  margin-left: 18%;
+  padding-left: 1%;
+  margin-bottom: 4%;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  background-color: #008CBA;
+  color: lightcyan;
+
+
+}
+
+.CAUSES:hover{
+  background-color: lightskyblue;
+  color: midnightblue;
+}
+.video1{
+  align-content: center;
+}
+
+.CAUSES1{
+  font-size: .9cm;
+  font-family: "Microsoft Sans Serif";
+  align-content: center;
+  display: grid;
+  align-items: center;
+  border: 1px solid powderblue;
+  width: 420px;
+  height: 171px;
+  margin-left: 50%;
+  margin-bottom: 4%;
+  padding-left:2% ;
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  padding-top: 1.5em;
+  background-color: #008CBA;
+  color: lightcyan;
+}
+
+
+.CAUSES1:hover{
+  background-color: lightskyblue;
+  color:midnightblue;
+}
+
+.symptom1{
+  margin-top: 2%;
+  margin-left: 8%;
+  display: grid;
+  //border: 1px solid black;
+  width: 600px;
+  height: 327px;
+}
+
+.symptom1-img{
+  margin-left: 4%;
+  display: inline;
+}
+
+.title{
+  align-content: center;
+  margin-left: 28%;
+  font-size: 2rem;
+  font-family: "Times New Roman";
+  color: midnightblue;
+}
+
+.content{
+  font-family: "Times New Roman";
+  font-size: .5cm;
+  color: #008CBA;
+}
+
+.symptompic1{
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  margin-left: 25%;
+  transition: transform .2s;
+}
+
+.symptompic1:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+
+.symptompic2{
+  width: 200px;
+  height: 200px;
+  margin-top: 5%;
+  transition: transform .2s;
+}
+
+
+.symptompic2:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+.symptompic3{
+  width: 200px;
+  height: 200px;
+  // top: 100%;
+  margin-top: 5%;
+  margin-left: 10%;
+  transition: transform .2s;
+  // padding-left: 10%;
+}
+
+
+.symptompic3:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+.box_test{
+  display: grid;
+  // border: 1px solid black;
+  width: 550px;
+  height: 400px;
+  margin-left: 58%;
+  position: absolute;
+  top: 80%;
+}
+
+.navfaq{
+  display: grid;
+  width: 1440px;
+  margin-top: 10%;
+  height: 30px;
+  text-align: center;
+  background-color: midnightblue;
+  font-size: 1.5rem;
+  font-family: "Times New Roman";
+  color: white;
+}
+
+.accordion {
+  background-color: aliceblue;
+  color: midnightblue;
+  cursor: pointer;
+  padding: 18px;
+  width: 70%;
+  margin-left: 20%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: lightskyblue;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: deepskyblue;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: aliceblue;
+  max-height: 0;
+  width: 70%;
+  margin-left: 20%;
+  color: black;
+  font-size: 15px;
+  font-family: "SansSerif";
+  overflow: hidden;
+  align-items: center;
+  transition: max-height 0.2s ease-out;
+}
+
+body{
+  background-color: aliceblue;
+
+}

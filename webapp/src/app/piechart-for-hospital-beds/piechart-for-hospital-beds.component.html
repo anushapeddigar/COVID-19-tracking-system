@@ -1,0 +1,13 @@
+<div class="text">
+  <button mat-raised-button (click)="displayChart()">Display Chart</button>
+  <div class="floatRight" *ngIf="isCharReady">
+    <br>
+    <h2 class="heading">Available Bed Count By Hospital</h2>
+    <canvas baseChart class="displayChart" style="width: 600px; height: 450px;"
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
+</div>

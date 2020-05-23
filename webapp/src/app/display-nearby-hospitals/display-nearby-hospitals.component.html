@@ -1,0 +1,48 @@
+<div class="main">
+<h1 class="topHeading">COVID-19 PANDEMIC NEARBY HOSPITAL BED INFORMATION</h1>
+<div class="centerOfPage">
+    <span class="centerOfPage">
+      <h2>Select Patient Address</h2>
+      <label><span>State:</span> <!--class="form-label"-->
+        <select #state class="dropdown">
+            <option value="Massachusetts">MASSACHUSETTS</option>
+      </select>
+      </label>
+      <label><span>City:</span>
+        <select class="dropdown" #city (change)="displayInformation($event.target.value)">
+            <option value="">Select City</option>
+            <option value="Boston">BOSTON</option>
+        </select>
+      </label>
+      <!--TODO: If needed add Pincode-->
+    </span>
+</div>
+<!--If a City is selected from dropdown then display near by hospitals -->
+<div class="centerOfPage" *ngIf="selectedCity">
+  <table class="table_todo">
+    <tr class="table_rowStyle">
+      <td class="title_todo title_headerr">City</td>
+      <td class="title_todo title_headerr">Hospital</td>
+      <td class="title_todo title_headerr" *ngIf="auth.isAdmin()">Total Beds</td>
+      <td class="title_todo title_headerr">Available Beds</td>
+      <td>
+    </tr>
+    <tr class="table_rowStyle" *ngFor="let bed of bedsByCity" (click)="highlightClickedRow(bed)" [ngClass] = "{'highlight' : bed == selectedHospital}"
+        >
+      <td class="title_todo">
+        <span class="input_editoption">{{bed.city}}</span>
+      </td>
+      <td class="title_todo">
+        <span class="input_editoption">{{bed.hospital}}</span>
+      </td>
+      <td class="title_todo" *ngIf="auth.isAdmin()">
+        <span class="input_editoption">{{bed.totalBeds}}</span>
+      </td>
+      <td class="title_todo">
+        <span class="input_editoption">{{bed.availableBeds}}</span>
+      </td>
+    </tr>
+  </table>
+  <button mat-raised-button class="btnSubmit"  *ngIf="auth.isAdmin()" (click)="navigate()">Allocate Bed</button>
+</div>
+</div>

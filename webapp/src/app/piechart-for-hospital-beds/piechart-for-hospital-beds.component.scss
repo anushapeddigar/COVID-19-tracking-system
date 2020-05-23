@@ -1,0 +1,31 @@
+.displayChart {
+  display: block;
+  width: 500px; 
+  height: 400px;
+  color: whitesmoke;
+  background-color: lightgrey;
+}
+
+.floatRight {
+  float: right;
+  margin-left: 60%;
+  position: fixed;
+}
+
+.heading {
+  margin-left: 35%;
+  margin-top: 10%;
+}
+
+button {
+  float: right;
+  margin-left: 80%;
+  position: fixed;
+  font-size: 16px;
+  padding: 13px 30px;
+  border-radius: 5%;
+}
+
+.text{
+  color: whitesmoke;
+}

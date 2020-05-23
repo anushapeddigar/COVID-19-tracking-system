@@ -1,0 +1,31 @@
+<div class="main">
+
+  <div class="row" style="margin-top: 4%; margin-left: 3%;">
+    <div class="col-md-6">
+      <h1 style="color: darkgoldenrod;">Register</h1>
+      <p class="lead textcolor">Already a member? Please log in instead.</p>
+      <form (submit)="register()" ngNativeValidate>
+        <div class="form-group textcolor">
+          <label for="name">Full name</label>
+
+          <input type="text" class="form-control" name="name" placeholder="Enter your name" [(ngModel)]="credentials.name" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" required>
+        </div>
+        <div class="form-group textcolor">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="credentials.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" required>
+        </div>
+        <div class="form-group textcolor">
+          <label for="password ">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password" required>
+         <!-- pattern=".{8,}"-->
+        </div>
+        <div class="form-group  textcolor">
+          <label for="name">Role : Choose admin or Patient </label>
+          <input type="text" class="form-control" name="name" placeholder="Enter your name" [(ngModel)]="credentials.role" required>
+        </div>
+        <button mat-raised-button type="submit" class="btn btn-default">Register!</button>
+      </form>
+    </div>
+  </div>
+</div>
+

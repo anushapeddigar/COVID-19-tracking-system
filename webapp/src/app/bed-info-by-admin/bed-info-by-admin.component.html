@@ -1,0 +1,53 @@
+<form class="centerOfPage" ngNativeValidate>
+  <div class="centerOfPage">
+    <span>
+      <label class="form-label"><span class="bed-text">State:</span> <!--class="form-label"-->
+        <select #state class="dropdown small-left7">
+            <option value="Massachusetts">MASSACHUSETTS</option>
+      </select>
+      </label>
+      <label class="form-label"><span class="bed-text right">City:&nbsp;</span>
+        <select class="dropdown" #city>
+            <option value="Boston">BOSTON</option>
+        </select>
+      </label>
+      <label class="form-label"><span class="bed-text">Hospital:</span>
+        <select class="dropdown small-left2" #hospital (change)="displayInformation($event.target.value)">
+          <option value="">List of Hospitals</option>
+          <option value="new hospital">Add New Hospital</option>
+          <option *ngFor="let bed of bedsChild" [value]='bed.id'>
+                  {{bed.hospital}}
+        </select>
+      </label>
+    </span>
+  </div>
+  <!--If new hospital then add information about bed count-->
+  <div class="centerOfPage" *ngIf="newHospitalInfo">
+    <label><span class="bed-text">Hospital Name:</span><input required type="text" #hospitalName required></label>
+    <label><span style="margin-right: 9%" class="bed-text">Address:</span><input required type="textarea" #address required></label>
+    <label><span style="margin-right: 9%" class="bed-text">Pincode:</span><input required type="number" #pincode required></label>
+    <label><span style="margin-right: 7%" class="bed-text">Total Beds:</span><input required type="number" class="input_editOption" #totalBeds></label>
+    <label><span class="bed-text">Available Beds:</span><input required type="number" class="input_editOption" #availableBeds></label>
+    <button mat-raised-button class="btnSubmit centerOfPage" (click)="addBedInformation(state.value, city.value, hospitalName.value,address.value,pincode.value,
+        totalBeds.value, availableBeds.value)">Add Bed Information</button>
+  </div>
+
+  <!--If existing Hospital then display below Information-->
+  <div class="centerOfPage" *ngIf="bedInfo">
+    <label><span class="bed-text">Update Bed Information</span></label>
+    <label><span class="bed-text">Total Bed Count:</span><span class="bed-text bold-text">{{bedInfo.totalBeds}}</span></label>
+    <label><span class="bed-text small-right">Available Bed Count:</span><span class="bed-text bold-text">{{bedInfo.availableBeds}}</span></label>
+
+    <label><span class="bed-text">Update Total Beds:</span><input type="number" class="input_editOption small-left" #totalBedCount><br/><br/>  <!--input_editOption-->
+      <button class="smallButtons addButton" (click)="addBedCount(totalBedCount.value, true)">Add +</button>
+      <button class="smallButtons subtractButton" (click)="removeBedCount(totalBedCount.value, true)">Remove -</button>
+    </label>
+    <label><span class="bed-text small-right">Update Available Beds:</span><input type="number" class="input_editOption small-left" #availableBedCount><br/><br/>
+      <button class="smallButtons addButton" (click)="addBedCount(availableBedCount.value, false)">Add +</button>
+      <button class="smallButtons subtractButton" (click)="removeBedCount(availableBedCount.value, false)">Remove -</button>
+    </label>
+
+    <button mat-raised-button class="btnSubmit small-left3 centerOfPage" (click)="updateHospitalBedInfo(bedInfo)">Update Information</button>
+    <button mat-raised-button class="btnSubmit small-left2 centerOfPage" (click)="removeHospital(bedInfo)">Remove Hospital</button>
+  </div>
+</form>

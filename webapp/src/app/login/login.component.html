@@ -1,0 +1,21 @@
+<div class="main">
+    <div class="row position">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <h1 class="form-signin-heading" style="color: darkgoldenrod">Log In</h1>
+        <p class="lead textcolor">Not a member? Please register instead.</p>
+        <form (submit)="login()">
+          <div class="form-group textcolor">
+            <label for="email textcolor">Email address</label>
+            <input #email type="email" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="credentials.email" >
+          </div>
+          <div class="form-group textcolor">
+            <label for="password">Password</label>
+            <input #pwd type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password">
+          </div>
+          <button type="submit" class="btn btn-default">Log in!</button>
+        </form>
+      </div>
+    </div>
+
+  </div>

@@ -1,0 +1,24 @@
+<div id="homeHeader">
+
+    <div class="container">
+      <div class="row">
+        <div class="Companylogo" (click)="loadHome()"></div>
+        <nav class="navBar">
+          <ul class="navitems">
+
+            <li class="list-inline-item navlinks"><a  routerLink="home">Home</a></li>
+
+            <li *ngIf="auth.isLoggedIn()&&auth.isPatient()" class="list-inline-item navlinks"><a routerLink="covid-19-pandemic/symptoms">Check Symptoms</a></li>
+            <!--To open Bed Management Page -> for Admin Role-->
+            <li *ngIf="auth.isLoggedIn()&&auth.isAdmin()" class="list-inline-item navlinks"><a href=# routerLink="covid-19-pandemic/hospital-bed-management"> Bed Management</a></li>
+            <li *ngIf="auth.isLoggedIn()" class="list-inline-item navlinks"><a href=# routerLink="covid-19-pandemic/nearby-hospitals"> Nearby Hospitals</a></li>
+            <li class="list-inline-item navlinks"><a href=# routerLink="covid-19-pandemic/app-world-map">Worldometer</a></li> <!--app-world-map-->
+            <li class="list-inline-item navlinks"><a href=# routerLink="covid-19-pandemic/informationPage">More Info</a></li>
+            <li *ngIf="auth.isLoggedIn()" class="list-inline-item navlinks"><a routerLink="covid-19-pandemic/app-profile">{{ auth.getUserDetails()?.name }}</a></li>
+            <li *ngIf="auth.isLoggedIn()" class="list-inline-item navlinks"><a (click)="auth.logout()">Logout</a></li>
+
+          </ul>
+        </nav>
+      </div>
+      </div>
+  </div>

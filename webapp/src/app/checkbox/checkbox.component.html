@@ -1,0 +1,28 @@
+<div class="main">
+<div class="checkboxtext">
+  <!-- <mat-card> -->
+    <mat-card-title style="color: white">Please check the symptoms you have</mat-card-title>
+
+    <mat-card-content>
+
+      <mat-list style="color: white">
+        <!--Check/Uncheck all the symptoms-->
+        <mat-list-item style="color: white">
+          <mat-checkbox style="color: white" [(ngModel)]="master_checked" [(indeterminate)]="master_indeterminate"
+            (change)="master_change()"><b>Check/ Uncheck All</b></mat-checkbox>
+        </mat-list-item>
+        <!--Display all the symptoms-->
+        <mat-list-item style="color: white" *ngFor="let item of checkbox_list">
+          <mat-checkbox style="color: white" [(ngModel)]="item.checked" [disabled]="item.disabled" [labelPosition]="item.labelPosition"
+            (change)="list_change()">{{ item.name }}</mat-checkbox>
+        </mat-list-item>
+
+      </mat-list>
+
+    </mat-card-content>
+
+    <button mat-raised-button (click)="goToPage('register')">Submit</button>
+  <!-- </mat-card> -->
+  </div>
+</div>
+

@@ -1,0 +1,90 @@
+$gray: #808080;
+.main{
+  background-image: url(../../assets/images/virus.jpg);
+  background-size: cover;
+  height: 1000px;
+  overflow: hidden;
+  width: 1640px;
+}
+/* Center on page horizontally & vertically */
+.centerOfPage {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.darkFont {
+  font-weight: bold;
+}
+
+.input_editOption{
+  width:6em;
+}
+
+.btnSubmit{
+  padding: 0.5% 1%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 80%;
+  margin: 0.2% 42% 0.2% 48%;
+}
+
+label {
+  display:block;
+  position:relative;
+  padding-left: 5%; /* adjust if necessary */
+  padding-bottom: 0.5%;
+}
+label > span {
+  padding-right: 0.5%;
+}
+
+span{
+  font-size: 120%;
+}
+
+.singleLine{
+  display: inline;
+  padding-left: 2%;
+  color: white;
+}
+
+/* CSS properties for Table */
+.table_todo{
+  width: 50%;
+  position: relative;
+  margin: auto;
+}
+
+.title_headerr{
+  font-size: large;
+  font-weight: bold;
+  color: white;
+}
+
+.title_todo{
+  width: 25%;
+  position: relative;
+  /*margin-left: 3em;*/
+}
+
+.input_editoption{
+  width:6em;
+  color: white;
+  font-weight: bold;
+}
+
+.table_rowStyle{
+  border-bottom: 1px solid gray;
+  height: 3em;
+}
+
+/* CSS property to highlight selected row in a table */
+table tr.highlight {
+  background-color: $gray !important;
+  color: #ffffff;
+}
+
+h2 {
+  color: white;
+}

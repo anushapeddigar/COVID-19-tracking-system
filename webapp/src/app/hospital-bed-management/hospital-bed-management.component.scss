@@ -1,0 +1,24 @@
+
+/* for web-page heading */
+.topHeading{
+  padding: 20px;
+  text-align: center;
+  background:midnightblue;
+  color: white;
+  font-size: 30px;
+}
+
+/* To display component at left side of page */
+.leftSide {
+  position: absolute;
+  left: 0;
+  width: 50%;
+}
+
+.main{
+  background-image: url(../../assets/images/virus.jpg);
+  background-size: cover;
+height: 1000px;
+overflow: hidden;
+  width: 1640px;
+}

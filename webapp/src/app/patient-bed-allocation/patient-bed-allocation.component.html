@@ -1,0 +1,51 @@
+<div class="main">
+<div class="centerOfPage" *ngIf="selectedBed">
+  <br>
+  <h2>Selected Hospital Details</h2>
+  <label class="singleLine"><span>City:</span><span class="darkFont">{{selectedBed.city}}</span></label>
+  <label class="singleLine"><span>Hospital:</span><span class="darkFont">{{selectedBed.hospital}}</span></label>
+  <br><br>
+  <h2>Look for Patient</h2>
+  <label class="singleLine"><span>First Name:</span><input required type="text" class="input_editOption" #firstName></label>
+  <label class="singleLine"><span>Last Name:</span><input required type="text" class="input_editOption" #lastName></label>
+  <!--ToDo: add Date of Birth as well while searching for patient-->
+  <!--<label><span>DOB:</span><input required type="text" class="input_editOption" #dob></label>-->
+  <button class="btnSubmit centerOfPage" *ngIf="!isBedAllocated" (click)="searchForPatient(firstName.value, lastName.value)">Search for Patient</button>
+</div>
+
+<!--Display Table with Patient Information Based on match found by First and Last Name-->
+<div class="centerOfPage" *ngIf="patients && !isBedAllocated">
+  <h2 *ngIf="patients.length == 0">No record found</h2>
+  <table class="table_todo" *ngIf="patients.length > 0">
+    <tr class="table_rowStyle">
+      <td class="title_todo title_headerr">FirstName</td>
+      <td class="title_todo title_headerr">LastName</td>
+      <td class="title_todo title_headerr">EmailAddress</td>
+      <td class="title_todo title_headerr">City</td>
+      <td>
+    </tr>
+    <tr class="table_rowStyle" *ngFor="let patient of patients"
+        (click)="highlightClickedRow(patient)" [ngClass] = "{'highlight' : patient == selectedPatient}">
+      <td class="title_todo">
+        <span class="input_editoption">{{patient.firstName}}</span>
+      </td>
+      <td class="title_todo">
+        <span class="input_editoption">{{patient.lastName}}</span>
+      </td>
+      <td class="title_todo">
+        <span class="input_editoption">{{patient.email}}</span>
+      </td>
+      <td class="title_todo">
+        <span class="input_editoption">{{patient.city}}</span>
+      </td>
+    </tr>
+  </table>
+  <button class="btnSubmit" *ngIf="patients.length > 0" (click)="allocateBedForPatient()">Allocate Bed</button>
+</div>
+<br><br>
+<!--Display Message after successfull bed allocation-->
+<div class="centerOfPage" *ngIf="isBedAllocated">
+  <h2>Bed at this hospital is successfully allocated to Patient.</h2>
+</div>
+
+</div>

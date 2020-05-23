@@ -1,0 +1,16 @@
+<div class="main">
+   
+    <marquee behavior="scroll" direction="right">
+       <h1 class="heading"> We Are Here To Help! </h1>
+    </marquee>
+    <br><br><br><br><br>
+    <div style="display: inline; margin-left: 35%;">
+    <button mat-raised-button class="button1" *ngIf="!auth.isLoggedIn()" id="register" class="Btn"routerLink="covid-19-pandemic/app-register">Register</button>  
+    <button mat-raised-button class="button1" *ngIf="!auth.isLoggedIn()" id="login" class="Btn" routerLink="covid-19-pandemic/app-login">Login</button>
+    </div>
+    <div style="margin-left: 44%;">
+        <button mat-raised-button class="button1" *ngIf="auth.isLoggedIn()" id="login" class="Btn" (click)="auth.logout()">Log Out</button>
+    </div>
+</div>
+
+

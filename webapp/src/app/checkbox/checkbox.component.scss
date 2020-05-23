@@ -1,0 +1,27 @@
+
+ .main{
+     background-image: url(../../assets/images/virus.jpg);
+     background-size: cover;
+    height: 1000px;
+   overflow: hidden;
+     width: 1440px;
+
+ }
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .checkboxtext{
+    color: darkgoldenrod;
+    margin-top: 4%;
+    margin-left: 2%;
+    /*background-color: lightgrey;
+    margin-right: 50%;*/
+  }
+

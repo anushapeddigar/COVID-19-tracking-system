@@ -1,0 +1,131 @@
+.main{
+  background-image: url(../../assets/images/background1.jpg);
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.centerOfPage {
+  /* Center form on page horizontally & vertically */
+  vertical-align: middle;
+}
+
+span{
+  font-size: 120%;
+}
+
+.next-line {
+  display: block;
+}
+
+.right {
+  margin-right: 6%;
+}
+
+@mixin left {
+  margin-left: 8%;
+  width: 20%;
+}
+
+/* css property for dropdown option */
+.dropdown{
+  @include left;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-size: 80%;
+}
+
+.btnSubmit{
+  padding: 0.5% 1%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 80%;
+  margin-left: 15%;
+}
+
+.input_editOption{
+  width: 18%;
+}
+
+.inputSection{
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.small-left3 {
+  margin-left: 8%;
+}
+
+label {
+  display:block;
+  position:relative;
+  padding-left: 5%; /* adjust if necessary */
+  padding-bottom: 0.5%;
+}
+label > span {
+  padding-right: 0.5%;
+}
+
+.small-left7 {
+  margin-left: 7%;
+}
+/*To add or remove bed count*/
+.smallButtons {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10%;
+  padding: 5px 20px;
+  font-size: 12px;
+  background-color: gray;
+  margin-right: 3%;
+}
+.addButton {
+  background-color: lightblue;
+}
+
+.subtractButton {
+  background-color: lightcoral;
+}
+
+.darkFont {
+  font-weight: bold;
+}
+
+.right7 {
+  margin-right: 7%;
+}
+
+.right9 {
+  margin-right: 9%;
+}
+
+.bed-text{
+  color:white;
+  margin-right: 4%;
+}
+
+.bold-text {
+  font-weight: bold;
+  margin-left: 1%;
+}
+
+ .left {
+  margin-left: 8%;
+  width: 20%;
+}
+
+ .small-left {
+  /* margin-left: 2%;*/
+   width: 18%;
+ }
+
+ .small-right {
+   margin-right: 1%;
+ }
+ .small-left2 {
+   margin-left: 4%;
+ }
